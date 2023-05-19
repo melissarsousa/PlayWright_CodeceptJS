@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "codeceptjs": "^3.4.1"
+    "@playwright/test": "^1.33.0",
+    "codeceptjs": "^3.4.1",
+    "faker": "^5.5.3"
   },
   "dependencies": {
     "playwright": "^1.33.0"
