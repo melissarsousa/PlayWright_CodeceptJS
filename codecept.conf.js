@@ -6,7 +6,7 @@ exports.config = {
     Playwright: {
       url: 'http://automationpratice.com.br',
       show: true,
-      browser: 'chromium'
+      browser: process.env.browser
     }
   },
   include: {
