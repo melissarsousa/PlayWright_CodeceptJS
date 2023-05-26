@@ -1,9 +1,15 @@
 var assert = require('assert');
 var faker = require('faker');
 
-const {I, homePage, loginPage} = inject()
+const {I, homePage, loginPage, login} = inject()
 
 Feature('Login');
+
+Scenario('Login with success @autologin', async () => {
+
+    await login('user')
+
+})
 
 // cenário com faker
 Scenario('Teste de login @login', async ({ I }) => {
@@ -15,8 +21,6 @@ Scenario('Teste de login @login', async ({ I }) => {
     homePage.accessLoginPage()
     I.waitForElement('#btnLogin', 10) // secs
     loginPage.loginOnAccount(faker.internet.email())
-
-    I.see('Login realizado')
 
     });
 

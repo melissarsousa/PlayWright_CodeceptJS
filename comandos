@@ -1,0 +1,5 @@
+1. Rodar o teste: npx codeceptjs run nomeDoTeste_test.js
+2. Criar novo teste: npx codeceptjs gt
+3. Criar um Page Object: npx codeceptjs gpo
+4. Rodar um cenário em uma feature: npx codeceptjs run --grep @tagDoScenario
+
