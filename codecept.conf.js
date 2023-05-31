@@ -1,7 +1,7 @@
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
   name: 'PlayWright_CodeceptJS',
-  tests: './*_test.js',
+  tests: './tests/*_test.js',
   output: './output',
   helpers: {
     Playwright: {
@@ -16,6 +16,14 @@ exports.config = {
     loginPage: "./pages/login_page.js",
     registerPage: "./pages/register_page.js"
   },
+  bootstrap: async () => {
+                   console.log("Executado antes do projeto.")
+                           // Pode ser usado para gerar uma massa de dados, por exemplo
+                 },
+  teardown: async () => {
+          console.log("Executado após o projeto.")
+          // Pode ser usado para enviar os reports para um servidor, por exemplo
+      },
   plugins: {
      screenshotOnFail: {
        enabled: true
