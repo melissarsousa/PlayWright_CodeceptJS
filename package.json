@@ -9,11 +9,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@codeceptjs/allure-legacy": "^1.0.2",
     "@playwright/test": "^1.33.0",
     "codeceptjs": "^3.4.1",
     "faker": "^5.5.3"
   },
   "dependencies": {
+    "mochawesome": "^7.1.3",
     "playwright": "^1.33.0"
   }
 }

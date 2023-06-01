@@ -28,26 +28,40 @@ exports.config = {
      screenshotOnFail: {
        enabled: true
      },
-     autoLogin: {
-       enabled: true,
-       saveToFile: true,
-       inject: 'login',
-       users:{
-         user: {
-           login: (I) => {
-               I.amOnPage('/');
-               I.click({xpath: '//*[@id="top_header"]/div/div/div[2]/div/ul/li[1]/a'});
-               I.waitForElement('#btnLogin', 10)
-               I.fillField('#user','mel@gmail.com');
-               I.fillField('#password',secret('12345678'));
-               I.click('#btnLogin')
-           },
-            check: (I) => {
-                I.amOnPage('/');
-                I.see('mel@gmail.com');
+     stepByStepReport: {
+          enabled: false,
+          deleteSuccessful: false,
+          fullPageScreenshots: true,
+          screenshotsForAllureReport: true
+     },
+     mocha: {
+           reporterOptions: {
+               reportDir: "output"
            }
-         }
+         },
+     allure: {
+         enabled: true,
+         require: '@codeceptjs/allure-legacy',
+       }
+
+//     autoLogin: {
+//       enabled: true,
+//       saveToFile: true,
+//       inject: 'login',
+//       users:{
+//         user: {
+//           login: (I) => {
+//               I.amOnPage('/');
+//               I.click({xpath: '//*[@id="top_header"]/div/div/div[2]/div/ul/li[1]/a'});
+//               I.waitForElement('#btnLogin', 10);
+//               I.fillField('#user','mel@gmail.com');
+//               I.fillField('#password',secret('12345678'));
+//               I.click('#btnLogin');
+//           },
+//            check: (I) => {
+//                I.amOnPage('/');
+//                I.see('mel@gmail.com');
+//           }
+//         }
        }
      }
-  }
-}

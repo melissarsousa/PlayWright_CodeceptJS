@@ -5,11 +5,11 @@ const {I, homePage, loginPage, login} = inject()
 
 Feature('Login');
 
-Scenario('Login with success @autologin', async () => {
-
-    await login('user')
-
-})
+//Scenario('Login with success @autoLogin', async () => {
+//
+//    await login('user')
+//
+//})
 
 // cenário com faker
 Scenario('Teste de login @login', async ({ I }) => {
